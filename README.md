@@ -43,6 +43,8 @@ print(f"Modal akhir setelah 8 bulan adalah: Rp{modal_awal + total_keuntungan:,.2
 ```
 Menampilkan total keuntungan dan modal akhir (modal awal + total keuntungan).
 
+
+# Hasil Output
 ```python
 === SIMULASI INVESTASI 8 BULAN ===
 
