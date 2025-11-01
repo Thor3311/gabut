@@ -43,4 +43,60 @@ print(f"Modal akhir setelah 8 bulan adalah: Rp{modal_awal + total_keuntungan:,.2
 ```
 Menampilkan total keuntungan dan modal akhir (modal awal + total keuntungan).
 
-<img src="/img/Latihan2. alt="" style=""/>
+```python
+=== SIMULASI INVESTASI 8 BULAN ===
+
+Modal awal: Rp100,000,000.00
+
+Bulan ke-1:
+  Persentase laba: 0.0%
+  Laba bulan ini: Rp0.00
+  Modal akhir bulan: Rp100,000,000.00
+
+Bulan ke-2:
+  Persentase laba: 0.0%
+  Laba bulan ini: Rp0.00
+  Modal akhir bulan: Rp100,000,000.00
+
+Bulan ke-3:
+  Persentase laba: 1.0%
+  Laba bulan ini: Rp1,000,000.00
+  Modal akhir bulan: Rp101,000,000.00
+
+Bulan ke-4:
+  Persentase laba: 1.0%
+  Laba bulan ini: Rp1,010,000.00
+  Modal akhir bulan: Rp102,010,000.00
+
+Bulan ke-5:
+  Persentase laba: 6.0%
+  Laba bulan ini: Rp6,120,600.00
+  Modal akhir bulan: Rp108,130,600.00
+
+Bulan ke-6:
+  Persentase laba: 6.0%
+  Laba bulan ini: Rp6,487,836.00
+  Modal akhir bulan: Rp114,618,436.00
+
+Bulan ke-7:
+  Persentase laba: 6.0%
+  Laba bulan ini: Rp6,877,106.16
+  Modal akhir bulan: Rp121,495,542.16
+
+Bulan ke-8:
+Bulan ke-7:
+  Persentase laba: 6.0%
+  Laba bulan ini: Rp6,877,106.16
+  Modal akhir bulan: Rp121,495,542.16
+
+Bulan ke-8:
+  Persentase laba: 4.0%
+  Laba bulan ini: Rp4,859,821.69
+  Modal akhir bulan: Rp126,355,363.85
+
+==================================================
+HASIL AKHIR:
+Total keuntungan selama 8 bulan: Rp26,355,363.85
+Modal akhir setelah 8 bulan: Rp126,355,363.85
+Return on Investment (ROI): 26.36%
+```
