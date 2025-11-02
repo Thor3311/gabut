@@ -18,7 +18,7 @@ modal_sekarang = modal_awal
 persentase_laba_per_bulan = [0, 0, 0.01, 0.01, 0.06, 0.06, 0.06, 0.04]
 ```
 
-Breakdown persentase laba per bulan:
+# Breakdown persentase laba per bulan:
 
     Bulan 1-2: 0% (masa awal belum menghasilkan)
 
@@ -28,7 +28,7 @@ Breakdown persentase laba per bulan:
 
     Bulan 8: 4% (sedikit penurunan)
 
-#🔄 Bagian 3: Proses Simulasi (Loop)
+# 🔄 Bagian 3: Proses Simulasi (Loop)
 
 ```python
 
