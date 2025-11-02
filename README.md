@@ -1,3 +1,120 @@
+# 🎲 Latihan 3
+
+# 🎯 Tujuan Program
+
+Program ini menghasilkan sejumlah n bilangan acak antara 0 sampai 0.5 (tidak termasuk 0.5) berdasarkan input dari pengguna.
+🔧 Bagian 1: Import Library
+```python
+
+import random
+```
+
+Mengimpor modul random yang berisi fungsi untuk menghasilkan bilangan acak.
+
+#📥 Bagian 2: Input Validation dengan Error Handling
+
+```python
+while True:
+    try:
+        n_input = input("Masukkan jumlah bilangan acak yang ingin ditampilkan (n): ")
+        # Mengubah input menjadi integer
+        n = int(n_input)
+        # Memastikan n adalah bilangan positif
+        if n > 0:
+            break
+        else:
+            print("Masukkan bilangan bulat positif.")
+    except ValueError:
+        # Menangani jika input bukan angka
+        print("Input tidak valid. Harap masukkan bilangan bulat.")
+```
+
+Mekanisme Validasi Input:
+
+```python
+    while True: - Loop infinite sampai input valid
+
+    try-except - Menangani error konversi string ke integer
+
+    n = int(n_input) - Mengkonversi input ke integer
+
+    if n > 0: - Memastikan bilangan positif
+
+    break - Keluar loop ketika input valid
+```
+
+Contoh Error Handling:
+```python
+    Input: "abc" → "Input tidak valid. Harap masukkan bilangan bulat."
+
+    Input: "-5" → "Masukkan bilangan bulat positif."
+
+    Input: "3" → Valid, lanjut ke program
+```
+
+# 📊 Bagian 3: Konfirmasi Input
+
+```python
+
+print(f"\nMenampilkan {n} bilangan acak yang lebih kecil dari 0.5:")
+```
+
+Menampilkan pesan konfirmasi dengan jumlah bilangan yang akan digenerate.
+
+# 🔄 Bagian 4: Generator Bilangan Acak
+
+```python
+for i in range(n):
+    # Menggunakan loop while untuk memastikan bilangan yang dihasilkan < 0.5
+    bilangan_acak = random.random()
+    while bilangan_acak >= 0.5:
+        bilangan_acak = random.random()
+    print(f"Bilangan acak ke-{i + 1}: {bilangan_acak:.4f}")
+```
+
+Proses Generasi Bilangan:
+```python
+    for i in range(n): - Loop sebanyak n kali
+
+    random.random() - Menghasilkan bilangan acak antara [0.0, 1.0)
+
+    while bilangan_acak >= 0.5: - Loop sampai dapat bilangan < 0.5
+
+    {bilangan_acak:.4f} - Format 4 angka desimal
+```
+
+# 🎪 Contoh Output Program:
+
+```txt
+Masukkan jumlah bilangan acak yang ingin ditampilkan (n): 3
+
+Menampilkan 3 bilangan acak yang lebih kecil dari 0.5:
+Bilangan acak ke-1: 0.2345
+Bilangan acak ke-2: 0.0891
+Bilangan acak ke-3: 0.4567
+```
+
+# ⚡ Cara Kerja Random Generation:
+
+```txt
+random.random() menghasilkan bilangan desimal antara:
+text
+
+0.0 ≤ bilangan < 1.0
+
+Loop while memastikan:
+text
+
+0.0 ≤ bilangan < 0.5
+```
+
+Contoh proses:
+```txt
+    Generate: 0.7 → ≥ 0.5 → generate ulang
+
+    Generate: 0.3 → < 0.5 → ✅ gunakan bilangan ini
+```
+
 # 📊 Tugas 2
 
 Program ini mensimulasikan perkembangan investasi selama 8 bulan dengan sistem bunga bergulung (compound interest), dimana laba setiap bulan ditambahkan ke modal untuk perhitungan bulan berikutnya.
