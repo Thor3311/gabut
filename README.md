@@ -1,21 +1,22 @@
-📊 Penjelasan Lengkap Kode Simulasi Investasi
-🎯 Tujuan Program
+# 📊 Penjelasan Lengkap Kode Simulasi Investasi
 
 Program ini mensimulasikan perkembangan investasi selama 8 bulan dengan sistem bunga bergulung (compound interest), dimana laba setiap bulan ditambahkan ke modal untuk perhitungan bulan berikutnya.
-🔧 Bagian 1: Inisialisasi Variabel
-python
+```python
 
 modal_awal = 100000000  # 100 juta rupiah
 modal_sekarang = modal_awal
+```
 
     modal_awal: Nilai investasi awal sebesar Rp 100,000,000
 
     modal_sekarang: Variabel dinamis yang akan berubah setiap bulan seiring dengan penambahan laba
 
-📈 Bagian 2: Data Persentase Laba
-python
+# 📈 Bagian 2: Data Persentase Laba
+
+```python
 
 persentase_laba_per_bulan = [0, 0, 0.01, 0.01, 0.06, 0.06, 0.06, 0.04]
+```
 
 Breakdown persentase laba per bulan:
 
@@ -27,43 +28,49 @@ Breakdown persentase laba per bulan:
 
     Bulan 8: 4% (sedikit penurunan)
 
-🔄 Bagian 3: Proses Simulasi (Loop)
-python
+#🔄 Bagian 3: Proses Simulasi (Loop)
+
+```python
 
 for bulan in range(8):
     laba_bulan_ini = modal_sekarang * persentase_laba_per_bulan[bulan]
     total_keuntungan += laba_bulan_ini
     modal_sekarang += laba_bulan_ini  # Laba ditambahkan ke modal
+```
 
-Proses yang terjadi setiap bulan:
 
-    Hitung Laba Bulanan:
-    text
+# Proses yang terjadi setiap bulan:
+
+   Hitung Laba Bulanan:
+```txt
 
 Laba = Modal Sekarang × Persentase Laba
+```
 
-Akumulasi Total Keuntungan:
-text
+# Akumulasi Total Keuntungan:
 
+```txt
 Total Keuntungan = Total Keuntungan + Laba Bulan Ini
 
 Update Modal (Compound Effect):
 text
 
 Modal Baru = Modal Sekarang + Laba Bulan Ini
+```
 
-📊 Bagian 4: Output Detail per Bulan
-python
+# 📊 Bagian 4: Output Detail per Bulan
 
+```python
 print(f"Bulan ke-{bulan + 1}:")
 print(f"  Persentase laba: {persentase_laba_per_bulan[bulan]*100:.1f}%")
 print(f"  Laba bulan ini: Rp{laba_bulan_ini:,.2f}")
 print(f"  Modal akhir bulan: Rp{modal_sekarang:,.2f}")
+```
 
-Contoh output untuk beberapa bulan:
+# Contoh output untuk beberapa bulan:
 
+```txt
 Bulan 3 (Pertama kali profit):
-text
 
 Bulan ke-3:
   Persentase laba: 1.0%
@@ -71,15 +78,13 @@ Bulan ke-3:
   Modal akhir bulan: Rp101,000,000.00
 
 Bulan 5 (Laba meningkat):
-```txt
-
 Bulan ke-5:
   Persentase laba: 6.0%
   Laba bulan ini: Rp6,060,000.00  # Dari modal Rp101,000,000
   Modal akhir bulan: Rp107,060,000.00
 ```
 
-#💰 Bagian 5: Hasil Akhir
+# 💰 Bagian 5: Hasil Akhir
 
 ```python
 
