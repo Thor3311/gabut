@@ -104,10 +104,11 @@ Return on Investment (ROI): 26.36%
 ```
 
 
-Tujuan Program
+# Tugas 3
 
 Program ini mensimulasikan sistem ATM sederhana yang memungkinkan pengguna untuk melakukan tiga fungsi utama: tarik tunai, cek saldo, dan keluar dari sistem.
-🔧 Bagian 1: Import Library dan Inisialisasi
+
+# 🔧 Bagian 1: Import Library dan Inisialisasi
 ```python
 
 import sys
@@ -126,7 +127,8 @@ print("Selamat datang di atm sederhana")
 print(f"Saldo anda saat ini : Rp {balance:,.0f}")
 ```
 Menampilkan pesan selamat datang dan saldo awal dengan format Rupiah.
-#🔄 Bagian 3: Loop Menu Utama
+
+# 🔄 Bagian 3: Loop Menu Utama
 ```python
 
 while True:
@@ -136,7 +138,8 @@ while True:
     print("3. Keluar")
 ```
 Loop infinite yang akan terus menampilkan menu sampai pengguna memilih keluar.
-#💵 Bagian 4: Fitur Tarik Tunai (Opsi 1)
+
+# 💵 Bagian 4: Fitur Tarik Tunai (Opsi 1)
 python
 ```python
 if choice == '1':
@@ -166,7 +169,8 @@ if choice == '1':
     except ValueError:
         print("input tidak valid. Harap masukan Angka.")
 ```
-#Fitur Keamanan dalam Tarik Tunai:
+
+# Fitur Keamanan dalam Tarik Tunai:
 
     try-except: Menangani error jika input bukan angka
 
@@ -176,14 +180,17 @@ if choice == '1':
 
     Auto exit: Keluar otomatis jika saldo habis
 
-#📊 Bagian 5: Fitur Cek Saldo (Opsi 2)
+# 📊 Bagian 5: Fitur Cek Saldo (Opsi 2)
+
 ```python
 
 elif choice == '2':
     print(f"Saldo Anda saat ini: Rp {balance:,.0f}")
 ```
 Sangat sederhana - hanya menampilkan saldo terkini.
-#🚪 Bagian 6: Fitur Keluar (Opsi 3)
+
+# 🚪 Bagian 6: Fitur Keluar (Opsi 3)
+
 ```python
 
 elif choice == '3':
@@ -198,7 +205,9 @@ else:
     print("Pilihan tidak valid. mohon masukan Angka 1/2/3")
 ```
 Menangani input yang tidak valid selain 1, 2, atau 3.
-#🎪 Bagian 8: Menjalankan Program
+
+# 🎪 Bagian 8: Menjalankan Program
+
 ```
 
 if __name__ == "__main__":
