@@ -3,7 +3,9 @@
 # 🎯 Tujuan Program
 
 Program ini menghasilkan sejumlah n bilangan acak antara 0 sampai 0.5 (tidak termasuk 0.5) berdasarkan input dari pengguna.
-🔧 Bagian 1: Import Library
+
+# 🔧 Bagian 1: Import Library
+
 ```python
 
 import random
