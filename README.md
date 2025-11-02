@@ -11,7 +11,7 @@ import random
 
 Mengimpor modul random yang berisi fungsi untuk menghasilkan bilangan acak.
 
-#📥 Bagian 2: Input Validation dengan Error Handling
+# 📥 Bagian 2: Input Validation dengan Error Handling
 
 ```python
 while True:
