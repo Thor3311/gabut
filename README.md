@@ -1,4 +1,4 @@
-# 📊 Penjelasan Lengkap Kode Simulasi Investasi
+# 📊 Tugas 2
 
 Program ini mensimulasikan perkembangan investasi selama 8 bulan dengan sistem bunga bergulung (compound interest), dimana laba setiap bulan ditambahkan ke modal untuk perhitungan bulan berikutnya.
 ```python
@@ -161,7 +161,7 @@ Return on Investment (ROI): 26.36%
 ```
 
 
-# Tugas 3
+# 💰 Tugas 3
 
 Program ini mensimulasikan sistem ATM sederhana yang memungkinkan pengguna untuk melakukan tiga fungsi utama: tarik tunai, cek saldo, dan keluar dari sistem.
 
