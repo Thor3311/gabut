@@ -1,47 +1,99 @@
-# TUGAS 2
+📊 Penjelasan Lengkap Kode Simulasi Investasi
+🎯 Tujuan Program
 
-#  Inisialisasi Variable
-```python
+Program ini mensimulasikan perkembangan investasi selama 8 bulan dengan sistem bunga bergulung (compound interest), dimana laba setiap bulan ditambahkan ke modal untuk perhitungan bulan berikutnya.
+🔧 Bagian 1: Inisialisasi Variabel
+python
+
 modal_awal = 100000000  # 100 juta rupiah
-total_keuntungan = 0
-```
-modal_awal: Menyimpan nilai investasi awal sebesar 100 juta Rupiah
-total_keuntungan: Variabel untuk menampung akumulasi keuntungan dari semua bulan
+modal_sekarang = modal_awal
 
-#  Data Persentase Per-Bulan
-```python
-persentase_laba_per_bulan = [0, 0, 0.01, 0.02, 0.06, 0.06, 0.06, 0.04]
-```
-Array ini menyimpan persentase laba setiap bulan dalam bentuk desimal:
-    Bulan 1-2: 0% (belum menghasilkan laba)
-    Bulan 3: 1% (0.01)
-    Bulan 4: 2% (0.02) - seharusnya 1% menurut deskripsi
-    Bulan 5-7: 6% (0.06)
-    Bulan 8: 4% (0.04)
+    modal_awal: Nilai investasi awal sebesar Rp 100,000,000
 
-#  Proses Perhitungan Laba
-```python
+    modal_sekarang: Variabel dinamis yang akan berubah setiap bulan seiring dengan penambahan laba
+
+📈 Bagian 2: Data Persentase Laba
+python
+
+persentase_laba_per_bulan = [0, 0, 0.01, 0.01, 0.06, 0.06, 0.06, 0.04]
+
+Breakdown persentase laba per bulan:
+
+    Bulan 1-2: 0% (masa awal belum menghasilkan)
+
+    Bulan 3-4: 1% (stabil di fase awal profit)
+
+    Bulan 5-7: 6% (peningkatan signifikan)
+
+    Bulan 8: 4% (sedikit penurunan)
+
+🔄 Bagian 3: Proses Simulasi (Loop)
+python
+
 for bulan in range(8):
-    laba_bulan_ini = modal_awal * persentase_laba_per_bulan[bulan]
+    laba_bulan_ini = modal_sekarang * persentase_laba_per_bulan[bulan]
     total_keuntungan += laba_bulan_ini
-```
-Loop ini melakukan:
-    Iterasi melalui 8 bulan
-    Menghitung laba setiap bulan dengan rumus: Modal Awal × Persentase Laba
-    Menambahkan laba bulanan ke total keuntungan
+    modal_sekarang += laba_bulan_ini  # Laba ditambahkan ke modal
 
-# Output Hasil
-```python
-print(f"Bulan ke-{bulan + 1}: Laba = Rp{laba_bulan_ini:,.2f}")
-```
-Menampilkan laba per bulan dengan format Rupiah yang rapi.
+Proses yang terjadi setiap bulan:
 
-# Hasil Akhir
-```python
-print(f"Total keuntungan selama 8 bulan adalah: Rp{total_keuntungan:,.2f}")
-print(f"Modal akhir setelah 8 bulan adalah: Rp{modal_awal + total_keuntungan:,.2f}")
+    Hitung Laba Bulanan:
+    text
+
+Laba = Modal Sekarang × Persentase Laba
+
+Akumulasi Total Keuntungan:
+text
+
+Total Keuntungan = Total Keuntungan + Laba Bulan Ini
+
+Update Modal (Compound Effect):
+text
+
+Modal Baru = Modal Sekarang + Laba Bulan Ini
+
+📊 Bagian 4: Output Detail per Bulan
+python
+
+print(f"Bulan ke-{bulan + 1}:")
+print(f"  Persentase laba: {persentase_laba_per_bulan[bulan]*100:.1f}%")
+print(f"  Laba bulan ini: Rp{laba_bulan_ini:,.2f}")
+print(f"  Modal akhir bulan: Rp{modal_sekarang:,.2f}")
+
+Contoh output untuk beberapa bulan:
+
+Bulan 3 (Pertama kali profit):
+text
+
+Bulan ke-3:
+  Persentase laba: 1.0%
+  Laba bulan ini: Rp1,000,000.00
+  Modal akhir bulan: Rp101,000,000.00
+
+Bulan 5 (Laba meningkat):
+```txt
+
+Bulan ke-5:
+  Persentase laba: 6.0%
+  Laba bulan ini: Rp6,060,000.00  # Dari modal Rp101,000,000
+  Modal akhir bulan: Rp107,060,000.00
 ```
-Menampilkan total keuntungan dan modal akhir (modal awal + total keuntungan).
+
+#💰 Bagian 5: Hasil Akhir
+
+```python
+
+print(f"Total keuntungan selama 8 bulan: Rp{total_keuntungan:,.2f}")
+print(f"Modal akhir setelah 8 bulan: Rp{modal_sekarang:,.2f}")
+print(f"Return on Investment (ROI): {(total_keuntungan/modal_awal)*100:.2f}%")
+```
+Metrik yang dihitung:
+
+    Total Keuntungan: Seluruh laba yang terkumpul dalam 8 bulan
+
+    Modal Akhir: Nilai total investasi di akhir periode
+
+    ROI: Persentase keuntungan terhadap modal awal
 
 
 # Hasil Output
