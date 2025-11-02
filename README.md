@@ -1,4 +1,4 @@
-# 🎲 Latihan 3
+# 🎲 Latihan 1
 
 # 🎯 Tujuan Program
 
